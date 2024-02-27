@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #99d3f5;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    background: #fff;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px,
+        rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px,
+        rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+.box span:nth-child(1) {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -10px;
+    left: -10px;
+    overflow: hidden;
+
+}
+
+.box span:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: -10px !important;
+    right: -10px !important;
+    overflow: hidden;
+
+}
+
+.box span:nth-child(1)::before {
+    content: "NEW";
+    position: absolute;
+    top: 65px;
+    left: -25px;
+    width: 150%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff6547 0%, #ffb144 51%, #ff7053 100%);
+    box-shadow: 0 5px 10px #00000023;
+    transform: rotate(-45deg) translateY(-35px);
+}
+
+.box span:nth-child(2)::before {
+    content: "CARD";
+    z-index: 1;
+    position: absolute;
+    top: 70px;
+    left: -20px;
+    width: 150%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(45deg, #ff6547 0%, #ffb144 51%, #ff7053 100%);
+    box-shadow: 0 -5px 10px #00000023;
+    transform: rotate(-45deg) translateY(-3px);
+}
+
+.box span:nth-child(1)::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    background: #ff6547;
+    box-shadow: 140px -140px #ff6547;
+}
+
+.box span:nth-child(2)::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    background: #ff6547;
+    box-shadow: 140px -140px #ff6547;
+}
